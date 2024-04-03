@@ -80,11 +80,10 @@
         function initializeLiff(liffId) {
             liff.init({
                 liffId: liffId
-            }).then(() => {
-
-      if (!liff.isLoggedIn()) {
+.then(() => {
+    if (!liff.isLoggedIn()) {
         liff.login();
-      }
+        initializeApp();
 	    
             }).catch((err) => {
                 console.log('LIFF Initialization failed ', err);
