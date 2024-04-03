@@ -81,8 +81,7 @@
             liff.init({
                 liffId: liffId
             }).then(() => {
-                initializeApp();
-		    
+
       if (!liff.isLoggedIn()) {
         liff.login();
       }
