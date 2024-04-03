@@ -82,6 +82,11 @@
                 liffId: liffId
             }).then(() => {
                 initializeApp();
+		    
+      if (!liff.isLoggedIn()) {
+        liff.login();
+      }
+	    
             }).catch((err) => {
                 console.log('LIFF Initialization failed ', err);
             });
