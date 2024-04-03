@@ -81,11 +81,7 @@
             liff.init({
                 liffId: liffId
             }).then(() => {
-                const profile = await liff.getProfile();
-                $('#line-name').text(profile.displayName)
-                console.log(profile)
-            }())
-
+                initializeApp();
             }).catch((err) => {
                 console.log('LIFF Initialization failed ', err);
             });
